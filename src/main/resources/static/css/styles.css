@@ -1,0 +1,77 @@
+body {
+	/* padding-top: 20px; */
+	padding-bottom: 20px;
+}
+
+hr {
+	border: none;
+	height: 1.5px;
+	color: #858585;
+	background-color: #6f6f6f;
+}
+
+.hr-featured-books {
+	margin-top: -15px;
+	height: 1.5px;
+}
+
+.navbar {
+	margin-bottom: 20px;
+	border-radius: 0 !important;
+}
+
+.box {
+	border: 1px solid transparent;
+}
+
+.carousel .carousel-inner .item>img {
+	width: 100%;
+	height: 280px !important;
+}
+
+.img-block {
+	width: 100%;
+	height: 280px !important;
+}
+
+.page-top {
+	width: 100%;
+	height: 1em;
+	background-color: #f46b42;
+}
+
+.home-headline {
+	font-family: 'Times New Roman', 'Times', serif;
+	font-size: 24px;
+	color: #fff;
+	margin: auto;
+	text-align: center;
+	margin-top: -13px;
+}
+
+.home-headline span {
+	background-color: #231F20;
+	padding: 5px 22px;
+}
+
+.section-headline{
+	font-family: 'Times New Roman', 'Times', serif;
+	font-size: 24px;
+	color: #fff;
+	margin: auto;
+	text-align: center;
+	margin-top: 90px;
+}
+.section-headline span {
+	background-color: #231F20;
+	padding: 5px 22px;
+}
+.ico-red,.color-red{
+	color: #ff4d4d;
+}
+.ico-white{
+	color:white;
+}
+.ico-white:hover{
+	color: #ff4d4d;
+}

@@ -3,11 +3,11 @@ package com.brian.store.adminportal.controller;
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -53,7 +53,8 @@ public class BookController {
 
 	@RequestMapping("/bookList")
 	public String bookList(Model model) {
-		/* List<Book> bookList=bookService.findAll(); */
+		 List<Book> bookList=bookService.findAll(); 
+		 model.addAttribute("bookList",bookList);
 		return "bookList";
 	}
 }

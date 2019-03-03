@@ -1,5 +1,7 @@
 package com.brian.store.adminportal.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +17,11 @@ public class BookServiceImpl implements BookService{
 	public Book save(Book book) {
 		// TODO Auto-generated method stub
 		return bookRepository.save(book);
+	}
+
+	@Override
+	public List<Book> findAll() {
+		return (List<Book>) bookRepository.findAll();
 	}
 	
 }

@@ -54,7 +54,7 @@ hr {
 	padding: 5px 22px;
 }
 
-.section-headline{
+.section-headline {
 	font-family: 'Times New Roman', 'Times', serif;
 	font-size: 24px;
 	color: #fff;
@@ -62,16 +62,27 @@ hr {
 	text-align: center;
 	margin-top: 90px;
 }
+
 .section-headline span {
 	background-color: #231F20;
 	padding: 5px 22px;
 }
-.ico-red,.color-red{
+
+.ico-red, .color-red {
 	color: #ff4d4d;
 }
-.ico-white{
-	color:white;
+
+.ico-white {
+	color: white;
 }
-.ico-white:hover{
+
+.ico-white:hover {
 	color: #ff4d4d;
+}
+
+.form-small-header {
+	font-size: small;
+	color: red;
+	font-weight: bolder;
+	font-style: italic;
 }

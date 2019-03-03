@@ -38,25 +38,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 		return SecurityUtility.passwordEncoder();
 	}
 	
-	/*@Override
-    protected void configure(HttpSecurity http) throws Exception{
-        http
-        	.authorizeRequests()
-        	.antMatchers(PUBLIC_MATCHES)
-        	.permitAll();
-    }*/
-	
 	@Override
 	protected void configure(HttpSecurity http) throws Exception{
-		http
-			.authorizeRequests()
+		http.authorizeRequests()
 			.antMatchers(PUBLIC_MATCHES)
 			.permitAll()
 			.anyRequest()
 			.authenticated();
 		
-		http
-			.csrf().disable().cors().disable()
+		http.csrf().disable().cors().disable()
 			.formLogin().failureUrl("/login?error")
 			.defaultSuccessUrl("/")
 			.loginPage("/login").permitAll()

@@ -15,9 +15,12 @@ import com.brian.store.adminportal.service.UserService;
 
 @Service
 public class UserServiceImpl implements UserService {
+	
 	private static final Logger LOG = LoggerFactory.getLogger(UserService.class);
+	
 	@Autowired
 	private UserRepository userRepository;
+	
 	@Autowired
 	private RoleRepository roleRepository;
 

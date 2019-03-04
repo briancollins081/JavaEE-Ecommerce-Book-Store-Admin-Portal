@@ -6,11 +6,11 @@
 <body>
 	<div th:replace="common/header :: navbar"></div>
 	<div class="container">
-		<form class="form-horizontal" th:action="@{/book/add}" method="post"
+		<form class="form-horizontal" th:action="@{/book/updateBook}" method="post"
 			enctype="multipart/form-data">
 			<fieldset>
 				<legend class="center-block">
-					New Book Information <span class="form-small-header">* is a
+					Update Book Information <span class="form-small-header">* is a
 						required field.</span>
 				</legend>
 				<div class="form-group">
@@ -224,7 +224,7 @@
 
 				<div class="form-group">
 				<div class="col-sm-offset-2 col-sm-8">
-					<button type="submit" class="btn btn-success">Add Book</button>
+					<button type="submit" class="btn btn-success">Update Book</button>
 					<a class="btn btn-danger" th:href="@{/}">Cancel</a>
 				</div>
 					

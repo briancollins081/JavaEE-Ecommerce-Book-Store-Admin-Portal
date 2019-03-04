@@ -13,6 +13,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.brian.store.adminportal.domain.Book;
@@ -51,7 +52,22 @@ public class BookController {
 		}
 		return "redirect:bookList";
 	}
-
+	
+	@RequestMapping("/bookInfo")
+	public String bookInfo(@RequestParam("id") Long id,Model model) {
+		 Book book=bookService.findOne(id);
+		 model.addAttribute("book", book);
+		return "bookInfo";
+	}
+	
+	@RequestMapping("/updateBook")
+	public String updateBook(@RequestParam("id") Long id,Model model) {
+		 Book book=bookService.findOne(id);
+		 model.addAttribute("book", book);
+		 
+		return "updateBook";
+	}
+	
 	@RequestMapping("/bookList")
 	public String bookList(Model model) {
 		 List<Book> bookList=bookService.findAll(); 

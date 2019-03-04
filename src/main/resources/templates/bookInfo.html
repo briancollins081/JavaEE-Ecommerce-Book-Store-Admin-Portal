@@ -9,14 +9,14 @@
 		<div>
 			<ol class="breadcrumb">
 				<li><a th:href="@{bookList}"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>&nbsp;Go Back</a></li>
-				<li><a th:href="@{book/updateBook?id=}+${book.id}">Edit<i class="fa fa-long-arrow-left" aria-hidden="true"></i>&nbsp;Go Back</a></li>
+				<li><a th:href="@{updateBook?id=}+${book.id}"><i class="fa fa-pencil"></i>&nbsp;Edit Book</a></li>
 			</ol>
 		</div>
 		<div class="row">
 			<div class="col-sm-3">
 				<div class="panel panel-default">
 					<div class="panel-body">
-						<img alt="Book display image" th:src="@{/img/book/}+${book.id}+'.jpg'" class="img-responsive" />
+						<img alt="Book display image" th:src="@{/img/book/}+${book.id}+'.jpg'" class="img-responsive center-block" />
 						
 					</div>
 				</div>

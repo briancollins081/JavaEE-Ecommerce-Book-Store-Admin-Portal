@@ -135,7 +135,7 @@
 						<div class="input-group">
 							<input type="number" class="form-control" id="shippingWeight"
 								name="shippingWeight" th:value="${book.shippingWeight}"
-								placeholder="Shipping Weight" required="required" /> <span
+								step="0.01" placeholder="Shipping Weight" required="required" /> <span
 								class="input-group-addon">Ounces</span>
 						</div>
 						<span class="help-block">Shipping Weight of the book</span>
@@ -150,7 +150,7 @@
 					<div class="col-sm-8">
 						<div class="input-group">
 							<span class="input-group-addon">$</span> <input type="number"
-								class="form-control" id="listPrice" name="listPrice"
+								class="form-control" id="listPrice" step="0.01" name="listPrice"
 								th:value="${book.listPrice}" placeholder="List Price"
 								required="required" />
 						</div>

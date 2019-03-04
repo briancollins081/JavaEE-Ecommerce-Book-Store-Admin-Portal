@@ -42,8 +42,8 @@
 					 <p><strong>Number in Stock: </strong><span th:text="${book.inStockNumber}"></span></p>
 					</div>
 				</div>
-				<hr/>
-				<p><strong>Description: <br/></strong><span th:text="${book.description}"></span></p>
+				<strong>Description: <br/></strong>
+				<p><span th:utext="${book.description}"></span></p>
 			</div>
 		</div>
 	</div>

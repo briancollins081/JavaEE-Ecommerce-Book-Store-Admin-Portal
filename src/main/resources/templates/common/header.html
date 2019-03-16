@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<title>ABC Bookstore</title>
+<title>ABC Bookstore:Admin Portal</title>
 
 <!-- Bootstrap core CSS -->
 <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
@@ -47,8 +47,8 @@
 							data-toggle="dropdown" role="button" aria-haspopup="true"
 							aria-expanded="false">Book <span class="caret"></span></a>
 							<ul class="dropdown-menu">
-								<li><a th:href="@{book/add}">Add a new book</a></li>
-								<li><a th:href="@{book/bookList}">View book list</a></li>
+								<li><a th:href="@{/book/add}">Add a new book</a></li>
+								<li><a th:href="@{/book/bookList}">View book list</a></li>
 							</ul></li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
@@ -76,6 +76,9 @@
 			type="text/javascript"></script>
 		<script th:src="@{/js/dataTables.bootstrap.min.js}"
 			type="text/javascript"></script>
+		<script th:src="@{/js/bootbox.min.js}" type="text/javascript"></script>
+		<script th:src="@{/js/scripts.js}" type="text/javascript"></script>
+		
 		<!-- <script type="text/javascript"
 			src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
 		<script type="text/javascript"

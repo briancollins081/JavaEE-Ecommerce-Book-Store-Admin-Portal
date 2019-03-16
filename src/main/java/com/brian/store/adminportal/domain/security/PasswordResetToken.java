@@ -13,6 +13,7 @@ import javax.persistence.OneToOne;
 
 import com.brian.store.adminportal.domain.User;
 
+
 @Entity
 public class PasswordResetToken {
 	private static final int EXPIRATION=60*24;

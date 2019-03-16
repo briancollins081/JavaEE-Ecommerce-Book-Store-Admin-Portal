@@ -15,7 +15,6 @@ public class BookServiceImpl implements BookService{
 	private BookRepository bookRepository;
 
 	public Book save(Book book) {
-		// TODO Auto-generated method stub
 		return bookRepository.save(book);
 	}
 
@@ -27,6 +26,11 @@ public class BookServiceImpl implements BookService{
 	@Override
 	public Book findOne(Long id) {
 		return bookRepository.findById(id).get();
+	}
+
+	@Override
+	public void removeOne(Long id) {
+		bookRepository.deleteById(id);
 	}
 	
 }

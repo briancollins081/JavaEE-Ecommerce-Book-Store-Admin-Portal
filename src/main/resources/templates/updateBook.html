@@ -50,7 +50,7 @@
 									<div class="col-sm-8">
 										<input type="text" class="form-control" id="publisher"
 											name="publisher" th:value="${book.publisher}"
-											placeholder="Book Publisher" required="required" /> <span
+											placeholder="Book Publisher" /> <span
 											class="help-block">Publisher of the book</span>
 									</div>
 								</div>
@@ -61,16 +61,16 @@
 									<div class="col-sm-8">
 										<input type="date" class="form-control" id="publicationDate"
 											name="publicationDate" th:value="${book.publisher}"
-											placeholder="Book Publication date" required="required" /> <span
+											placeholder="Book Publication date" /> <span
 											class="help-block">Publication date of the book</span>
 									</div>
 								</div>
 								<!-- language -->
 								<div class="form-group">
-									<label for="" class="col-sm-2 control-label">Language</label>
+									<label for="" class="col-sm-2 control-label">* Language</label>
 									<div class="col-sm-8">
 										<select th:value="${book.language}" id="language"
-											class="form-control" name="language">
+											class="form-control" name="language" required="required">
 											<option selected="selected" disabled="disabled">Please
 												select an option ...</option>
 											<option value="english">English</option>
@@ -86,8 +86,8 @@
 									<label for="" class="col-sm-2 control-label">* Category</label>
 									<div class="col-sm-8">
 										<select th:value="${book.category}" id="category"
-											name="category" class="form-control">
-											<option selected="selected" value="" disabled="disabled">Please
+											name="category" class="form-control" required="required">
+											<option selected="selected" disabled="disabled">Please
 												select an option ...</option>
 											<option value="Management"
 												th:selected="(${book.category}=='Management')">Management</option>
@@ -133,7 +133,7 @@
 								</div>
 								<!-- isbn -->
 								<div class="form-group">
-									<label for="isbn" class="control-label col-sm-2">ISBN</label>
+									<label for="isbn" class="control-label col-sm-2">* ISBN</label>
 									<div class="col-sm-8">
 										<input type="text" class="form-control" id="isbn" name="isbn"
 											th:value="${book.isbn}" placeholder="ISBN"
@@ -210,8 +210,8 @@
 									<label for="status" class="control-label col-sm-2">Status</label>
 									<div class="col-sm-8">
 										<label><input type="radio" name="active" value="true"
-											checked="checked" />Active</label> <label><input
-											type="radio" name="active" value="false" />Inactive</label> <span
+											th:checked="${book.active}" />Active</label> <label><input
+											type="radio" name="active" value="false" th:checked="${!book.active}" />Inactive</label> <span
 											class="help-block">Whether the book is active or
 											inactive</span>
 									</div>
